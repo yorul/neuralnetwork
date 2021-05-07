@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[12]:
+# In[1]:
 
 
 import sys,os
@@ -92,12 +92,20 @@ for i in range(itres_num):
 fig, axs = plt.subplots(4, figsize=(15.0, 15.0))
 axs[0].plot(train_acc_list)
 axs[0].set_title("train data accuracy")
+axs[0].set_xlabel("epoch")
+axs[0].set_ylabel("accuracy")
 axs[1].plot(test_acc_list)
 axs[1].set_title("test data accuracy")
+axs[1].set_xlabel("epoch")
+axs[1].set_ylabel("accuracy")
 axs[2].plot(train_loss_list)
 axs[2].set_title("train data loss")
+axs[2].set_xlabel("epoch")
+axs[2].set_ylabel("loss")
 axs[3].plot(test_loss_list)
 axs[3].set_title("test data loss")
+axs[3].set_xlabel("epoch")
+axs[3].set_ylabel("loss")
 
 fig.tight_layout()
 plt.show()
